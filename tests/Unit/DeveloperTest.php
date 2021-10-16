@@ -12,7 +12,7 @@ final class DeveloperTest extends TestCase
             "sexo"              => "Masculino",
             "idade"             => 25,
             "hobby"             => "Programação e games",
-            "datadenascimento" => "1996-02-1996"
+            "datanascimento"    => "1996-02-22"
         ];
 
         $developer_obj = new DeveloperController();
