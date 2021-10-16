@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\UseCases\DtoInterface;
-use App\UseCases\Dtos\DeveloperDto;
-use App\Repositories\DeveloperRepository;
+use App\UseCases\DeveloperUseCase;
 
 class DeveloperController
 {
@@ -12,9 +10,9 @@ class DeveloperController
     public function store(array $dados)
     {
         
-        $repository = new DeveloperRepository();
+        $use_case = new DeveloperUseCase();
 
-        $stored = $repository->save(new DeveloperDto($dados));
+        $stored = $use_case->save($dados);
 
         return $stored;
     }

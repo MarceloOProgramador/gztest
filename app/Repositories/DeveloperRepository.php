@@ -7,10 +7,15 @@ use App\UseCases\Dtos\DtoInterface;
 class DeveloperRepository
 {
 
-    public function save(DtoInterface $dto)
+    public function __construct(
+        private DtoInterface $dto
+    )
+    {}
+
+    public function store()
     {
         
-        return TRUE;
+        return FALSE;
     }
 
 }
