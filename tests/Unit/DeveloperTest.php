@@ -9,7 +9,7 @@ final class DeveloperTest extends TestCase
     {
         $developer = [
             "nome"              => "Marcelo Pereira",
-            "sexo"              => "Masculino",
+            "sexo"              => "M",
             "idade"             => 25,
             "hobby"             => "Programação e games",
             "datanascimento"    => "1996-02-22"
