@@ -14,7 +14,7 @@ services:
         NODE_VERSION: "none"
 
     volumes:
-      - ..:/workspace:cached
+      - ..:/var/www/html/
     init: true
 
     # Overrides default command so things don't shut down after the process ends.

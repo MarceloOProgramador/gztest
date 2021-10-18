@@ -11,32 +11,32 @@ class DeveloperController
     public function index()
     {
         $developers = Developer::all();
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($developers);
+        
+        json_encode([$developers, 200]);
     }
 
-    public function store(array $dados)
+    public function store()
     {
+        $dados = filter_input(INPUT_GET, 'developer', FILTER_DEFAULT);
         $use_case = new DeveloperUseCase();
         $response = $use_case->save($dados);
 
-        header('Content-Type: application/json; charset=utf-8');
         echo json_encode($response);
     }
 
-    public function show($id)
+    public function show(int $id)
     {
         $developer = Developer::find($id);
 
-        header('Content-Type: application/json; charset=utf-8');
         echo json_encode($developer);
     }
 
-    public function update(array $dados, int $id)
+    public function update(int $id)
     {
+        $dados = filter_input(INPUT_GET, 'developer', FILTER_DEFAULT);
+        
         $use_case = new DeveloperUseCase($dados);
         $response = $use_case->update($dados, $id);
-        header('Content-Type: application/json; charset=utf-8');
         echo json_encode($response);
     }
 
@@ -44,7 +44,6 @@ class DeveloperController
     {
         $use_case = new DeveloperUseCase();
         $response = $use_case->delete($id);
-        header('Content-Type: application/json; charset=utf-8');
         echo json_encode($response);
     }
 
