@@ -19,9 +19,9 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "GzApi",
-            "database": "gzapi",
+            "database": "mariadb",
             "username": "root",
-            "password": "ROOT"
+            "password": "mariadb"
         }
     ]
 }

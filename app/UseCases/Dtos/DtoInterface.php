@@ -3,5 +3,7 @@
 namespace App\UseCases\Dtos;
 
 interface DtoInterface {
+
+    public function getDatas() : array;
     
 }
